@@ -6,7 +6,7 @@
 /*   By: tcarlier <tcarlier@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/26 01:22:51 by tcarlier          #+#    #+#             */
-/*   Updated: 2025/02/26 06:35:52 by tcarlier         ###   ########.fr       */
+/*   Updated: 2025/02/26 06:43:53 by tcarlier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,13 +62,13 @@ void	parse_arg(t_table *table, char **av)
 	table->nbr_philo = ft_atol(av[1]);
 	table->time_to_die = ft_atol(av[2]) * 1e3;
 	table->time_to_eat = ft_atol(av[3]) * 1e3;
-	table->time_to_sleep = ft_atol(av[4]) *1e3;
+	table->time_to_sleep = ft_atol(av[4]) * 1e3;
 	if (av[5])
 		table->limit_of_meal = ft_atol(av[5]);
 	else
 		table->limit_of_meal = -1;
 	if (table->time_to_die < 6e4
-			|| table->time_to_eat < 6e4
-			|| table->time_to_sleep < 6e4)
+		|| table->time_to_eat < 6e4
+		|| table->time_to_sleep < 6e4)
 		error_exit("use timestampl ager then 60ms");
 }
