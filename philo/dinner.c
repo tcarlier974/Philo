@@ -6,7 +6,7 @@
 /*   By: tcarlier <tcarlier@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/26 02:20:22 by tcarlier          #+#    #+#             */
-/*   Updated: 2025/02/26 06:19:51 by tcarlier         ###   ########.fr       */
+/*   Updated: 2025/02/26 06:44:43 by tcarlier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ void	eat(t_philo *philo)
 void	*dinner_thread(void *param)
 {
 	t_philo	*philo;
-	
+
 	philo = (t_philo *)param;
 	wait_all_thread(philo->table);
 	set_long(&philo->mutex, &philo->last_eat, gettime(MILLISECOND));
@@ -98,10 +98,8 @@ void	dinner(t_table *table)
 	else
 	{
 		while (++i < table->nbr_philo)
-		{
 			safe_thread_handle(&table->philo[i].thread_id, dinner_thread,
 				&table->philo[i], CREATE);
-		}
 	}
 	safe_thread_handle(&table->monitor, monitor_dinner, table, CREATE);
 	table->start_of_sim = gettime(MILLISECOND);
