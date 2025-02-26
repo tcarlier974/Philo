@@ -6,7 +6,7 @@
 /*   By: tcarlier <tcarlier@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/26 04:52:05 by tcarlier          #+#    #+#             */
-/*   Updated: 2025/02/26 05:34:29 by tcarlier         ###   ########.fr       */
+/*   Updated: 2025/02/26 06:45:11 by tcarlier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ void	precise_sleep(long usec, t_table *table)
 void	clean(t_table *table)
 {
 	t_philo	*philo;
-	int	i;
+	int		i;
 
 	i = -1;
 	while (++i < table->nbr_philo)
