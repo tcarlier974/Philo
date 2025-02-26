@@ -6,7 +6,7 @@
 /*   By: tcarlier <tcarlier@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/26 01:40:27 by tcarlier          #+#    #+#             */
-/*   Updated: 2025/02/26 06:46:56 by tcarlier         ###   ########.fr       */
+/*   Updated: 2025/02/26 06:47:25 by tcarlier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,9 @@ void	*safe_malloc(size_t bytes)
 static void	mutex_error(int status, t_opc opcode)
 {
 	if (status == 0)
-	return ;
+		return ;
 	else if (EINVAL == status && (opcode == LOCK || opcode == UNLOCK
-		|| opcode == DESTROY))
+			|| opcode == DESTROY))
 		error_exit("the value specified by mutex is invalid\n");
 	else if (EINVAL == status && (opcode == INIT))
 		error_exit("the value specified by attr is invalid\n");
@@ -61,7 +61,7 @@ void	safe_mutex_handle(pthread_mutex_t *mutex, t_opc opcode)
 static void	thread_error(int status, t_opc opcode)
 {
 	if (status == 0)
-	return ;
+		return ;
 	if (EAGAIN == status)
 		error_exit("Insufficient resources to create another thread\n");
 	else if (EPERM == status)
