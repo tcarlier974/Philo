@@ -6,7 +6,7 @@
 /*   By: tcarlier <tcarlier@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/26 01:35:43 by tcarlier          #+#    #+#             */
-/*   Updated: 2025/02/26 06:27:46 by tcarlier         ###   ########.fr       */
+/*   Updated: 2025/02/26 06:35:13 by tcarlier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ static void	philo_init(t_table *table)
 {
 	int		i;
 	t_philo	*philo;
-	
+
 	i = -1;
 	while (++i < table->nbr_philo)
 	{
@@ -47,7 +47,7 @@ static void	philo_init(t_table *table)
 void	init(t_table *table)
 {
 	int	i;
-	
+
 	i = -1;
 	table->end_sim = false;
 	table->sim_ready = false;

@@ -6,7 +6,7 @@
 /*   By: tcarlier <tcarlier@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/26 01:22:51 by tcarlier          #+#    #+#             */
-/*   Updated: 2025/02/26 05:09:39 by tcarlier         ###   ########.fr       */
+/*   Updated: 2025/02/26 06:35:52 by tcarlier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,6 @@ static long	ft_atol(const char *str)
 
 void	parse_arg(t_table *table, char **av)
 {
-	
 	table->nbr_philo = ft_atol(av[1]);
 	table->time_to_die = ft_atol(av[2]) * 1e3;
 	table->time_to_eat = ft_atol(av[3]) * 1e3;
