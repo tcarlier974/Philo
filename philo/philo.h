@@ -6,7 +6,7 @@
 /*   By: tcarlier <tcarlier@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/25 03:42:15 by tcarlier          #+#    #+#             */
-/*   Updated: 2025/02/26 06:32:02 by tcarlier         ###   ########.fr       */
+/*   Updated: 2025/02/26 06:33:36 by tcarlier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,19 +50,17 @@ typedef enum e_philo_state
 	DIED,
 }	t_philo_state;
 
-typedef struct s_table t_table;
+typedef struct s_table	t_table;
 
-typedef struct	s_fork
+typedef struct s_fork
 {
 	long			fork_id;
 	pthread_mutex_t	fork;
-	
 }			t_fork;
-
 
 typedef struct s_philo
 {
-	int			id;
+	int				id;
 	long			time_eat;
 	long			last_eat;
 	bool			full;
@@ -71,7 +69,7 @@ typedef struct s_philo
 	pthread_mutex_t	mutex;
 	pthread_t		thread_id;
 	t_table			*table;
-}			t_philo;
+}				t_philo;
 
 struct s_table
 {
@@ -96,12 +94,12 @@ void	error_exit(char *str);
 void	init(t_table *table);
 void	*safe_malloc(size_t bytes);
 void	safe_thread_handle(pthread_t *thread_id, void *(*func)(void *),
-	void *arg, t_opc opcode);
+		void *arg, t_opc opcode);
 void	safe_mutex_handle(pthread_mutex_t *mutex, t_opc opcode);
 void	*monitor_dinner(void *param);
 void	write_status(t_philo_state state, t_philo *philo);
 bool	all_thread_running(pthread_mutex_t *mutex, long *nbr_of_thread,
-	long nbr_of_philo);
+		long nbr_of_philo);
 long	get_long(pthread_mutex_t *mutex, long *value);
 void	set_long(pthread_mutex_t *mutex, long *dest, long value);
 void	set_bool(pthread_mutex_t *mutex, bool *dest, bool value);
