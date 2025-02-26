@@ -6,7 +6,7 @@
 /*   By: tcarlier <tcarlier@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/26 01:35:43 by tcarlier          #+#    #+#             */
-/*   Updated: 2025/02/26 06:08:52 by tcarlier         ###   ########.fr       */
+/*   Updated: 2025/02/26 06:19:30 by tcarlier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ static void	philo_init(t_table *table)
 	i = -1;
 	while (++i < table->nbr_philo)
 	{
-		philo = table->philo;
+		philo = table->philo + i;
 		philo->id = i + 1;
 		philo->full = false;
 		philo->time_eat = 0;

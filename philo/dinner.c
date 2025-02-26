@@ -6,7 +6,7 @@
 /*   By: tcarlier <tcarlier@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/26 02:20:22 by tcarlier          #+#    #+#             */
-/*   Updated: 2025/02/26 05:52:20 by tcarlier         ###   ########.fr       */
+/*   Updated: 2025/02/26 06:19:51 by tcarlier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,8 +98,10 @@ void	dinner(t_table *table)
 	else
 	{
 		while (++i < table->nbr_philo)
+		{
 			safe_thread_handle(&table->philo[i].thread_id, dinner_thread,
 				&table->philo[i], CREATE);
+		}
 	}
 	safe_thread_handle(&table->monitor, monitor_dinner, table, CREATE);
 	table->start_of_sim = gettime(MILLISECOND);
