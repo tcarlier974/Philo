@@ -6,7 +6,7 @@
 /*   By: tcarlier <tcarlier@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/25 03:42:15 by tcarlier          #+#    #+#             */
-/*   Updated: 2025/02/26 05:32:52 by tcarlier         ###   ########.fr       */
+/*   Updated: 2025/02/26 06:31:32 by tcarlier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,9 +50,9 @@ typedef enum e_philo_state
 	DIED,
 }	t_philo_state;
 
-typedef	struct s_table t_table;
+typedef struct	s_table t_table;
 
-typedef	struct s_fork
+typedef struct	s_fork
 {
 	long			fork_id;
 	pthread_mutex_t	fork;
@@ -60,7 +60,7 @@ typedef	struct s_fork
 }			t_fork;
 
 
-typedef struct s_philo
+typedef struct	s_philo
 {
 	int			id;
 	long			time_eat;
@@ -73,7 +73,7 @@ typedef struct s_philo
 	t_table			*table;
 }			t_philo;
 
-struct s_table
+struct	s_table
 {
 	long			nbr_philo;
 	long			time_to_die;

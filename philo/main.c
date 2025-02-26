@@ -6,7 +6,7 @@
 /*   By: tcarlier <tcarlier@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/26 01:10:22 by tcarlier          #+#    #+#             */
-/*   Updated: 2025/02/26 06:29:54 by tcarlier         ###   ########.fr       */
+/*   Updated: 2025/02/26 06:30:45 by tcarlier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,5 +22,5 @@ int	main(int ac, char **av)
 	init(&table);
 	dinner(&table);
 	clean(&table);
-	return (0);	
+	return (0);
 }
